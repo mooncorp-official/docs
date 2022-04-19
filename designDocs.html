@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>디자인관리 매뉴얼</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mooncorp-font/nanumSquareRound@latest/index.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mooncorp-font/nanumSquareRound@latest/index.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit.min.js"></script>
+        <style>
+            *{
+                font-family: 'nanumSquareRound' !important;
+            }
+            
+            #sideNav{
+                width: 200px;
+            }
+
+            #sideNav .uk-nav-default{
+                font-size: 1em;
+            }
+
+            #sideNav .uk-nav-default li{
+                position: relative;
+            }
+
+            #sideNav .uk-nav-default li>a{
+                color: #000000;
+            }
+
+            #sideNav .uk-nav-default li.uk-active>a{
+                color: #1e87f0;
+                font-weight: bold;
+            }
+
+            #sideNav .uk-nav-default li.uk-active>a:before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: -25px;
+                width: 15px;
+                border-top: 1px solid #1e87f0;
+            }
+
+            section{
+                padding-top: 70px;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                UIkit.util.on('#sideNav>ul', 'active', function (e) {
+                    var openElem = document.getElementsByClassName('auto-open');
+                    for(let elem of openElem){
+                        elem.classList.remove('auto-open');
+                        if(elem.classList.contains('uk-open')){
+                            elem.querySelector('a').click();
+                        }
+                    }
+                    if(e.detail[0] > 0){
+                        var target = e.detail[1].closest('.uk-parent');
+                        if(target && !(target.classList.contains('uk-open'))){
+                            target.classList.add('auto-open');
+                            target.querySelector('a').click();
+                        }
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="uk-container">
+            <div uk-grid>
+                <div id="sideNav" class="uk-visible@m">
+                    <ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav="multiple: true;" uk-scrollspy-nav="closest: li; scroll: true;"  uk-sticky="offset: 70;">
+                        <li class="uk-active"><a href="#start-1">시작하기</a></li>
+                        <li class="uk-parent">
+                            <a href="#">기능 소개</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#intro-1">개요</a></li>
+                                <li><a href="#intro-2">홈페이지 기본 설정</a></li>
+                                <li><a href="#intro-3">헤더 설정</a></li>
+                                <li><a href="#intro-4">상품 리스트 페이지 설정</a></li>
+                                <li><a href="#intro-5">상품 상세 페이지 설정</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">홈페이지 기본 설정</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#basic-1">개요</a></li>
+                                <li><a href="#basic-2">폰트</a></li>
+                                <li><a href="#basic-3">기본아이콘</a></li>
+                                <li><a href="#basic-4">색상</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">헤더 설정</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#header-1">개요</a></li>
+                                <li><a href="#header-2">헤더 타입 & 디자인</a></li>
+                                <li><a href="#header-3">스티키</a></li>
+                                <li><a href="#header-4">기능</a></li>
+                                <li><a href="#header-5">페이지</a></li>
+                                <li><a href="#header-6">모바일 사이드바</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">상품 리스트 페이지 설정</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#productList-1">개요</a></li>
+                                <li><a href="#productList-2">타입</a></li>
+                                <li><a href="#productList-3">노출 아이템 수</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">상품 상세 페이지 설정</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#productDetail-1">개요</a></li>
+                                <li><a href="#productDetail-2">타입</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-width-expand">
+                    <div>
+                        <section id="start-1">
+                            <h1 class="uk-heading-divider">디자인관리 매뉴얼</h1>
+                        </section>
+                    </div>
+                    <div>
+                        <section id="intro-1">
+                            <h2>기능 소개</h2>
+                            <p>디자인 관리에서 웹사이트를 목적에 맞게 꾸미고 내용을 추가할 수 있습니다. 전체 기능은 다음과 같습니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>홈페이지 기본 설정</li>
+                                <li>헤더 설정</li>
+                                <li>상품 리스트 설정</li>
+                                <li>상품 상세 페이지 설정</li>
+                            </ul>
+                        </section>
+                        <section id="intro-2">
+                            <h3>홈페이지 기본 설정</h3>
+                            <p>홈페이지 전체적으로 적용되는 디자인 설정 기능입니다. 다음과 같은 기능을 제공합니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>폰트 설정</li>
+                                <li>기본아이콘 설정</li>
+                                <li>색상 설정</li>
+                            </ul>
+                        </section>
+                        <section id="intro-3">
+                            <h3>헤더 설정</h3>
+                            <p>헤더 디자인 설정 입니다. 다음과 같은 기능을 제공합니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>헤더 타입 및 기본 디자인 설정</li>
+                                <li>스티키(고정 헤더) 설정</li>
+                                <li>기능 설정</li>
+                                <li>페이지 설정</li>
+                                <li>모바일 사이드바 설정</li>
+                            </ul>
+                        </section>
+                        <section id="intro-4">
+                            <h3>상품 리스트 페이지 설정</h3>
+                            <p>상품 리스트 페이지 설정 입니다. 다음과 같은 기능을 제공합니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>타입 설정</li>
+                                <li>상품 리스트 노출 아이템 수 설정</li>
+                            </ul>
+                        </section>
+                        <section id="intro-5">
+                            <h3>상품 상세 페이지 설정</h3>
+                            <p>상품 상세 페이지 설정 입니다. 다음과 같은 기능을 제공합니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>타입 설정</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <hr class="uk-margin-large-top" />
+                    <div>
+                        <section id="basic-1">
+                            <h2>홈페이지 기본 설정</h2>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="basic-2">
+                            <h3>폰트</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="basic-3">
+                            <h3>기본아이콘</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="basic-4">
+                            <h3>색상</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                    </div>
+                    <hr class="uk-margin-large-top" />
+                    <div>
+                        <section id="header-1">
+                            <h2>헤더 설정</h2>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="header-2">
+                            <h3>헤더 타입 & 디자인</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="header-3">
+                            <h3>스티키</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="header-4">
+                            <h3>기능</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="header-5">
+                            <h3>페이지</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="header-6">
+                            <h3>모바일 사이드바</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                    </div>
+                    <hr class="uk-margin-large-top" />
+                    <div>
+                        <section id="productList-1">
+                            <h2>상품 리스트 페이지 설정</h2>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="productList-2">
+                            <h3>타입</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="productList-3">
+                            <h3>노출 아이템 수</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                    </div>
+                    <hr class="uk-margin-large-top" />
+                    <div>
+                        <section id="productDetail-1">
+                            <h2>상품 상세 페이지 설정</h2>
+                            <p>준비중입니다.</p>
+                        </section>
+                        <section id="productDetail-2">
+                            <h3>타입</h3>
+                            <p>준비중입니다.</p>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
