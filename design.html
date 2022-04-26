@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>디자인관리 매뉴얼</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mooncorp-font/nanumSquareRound@latest/index.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mooncorp-font/nanumSquareRound@latest/index.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mooncorp-font/font@latest/index.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit.min.js"></script>
         <style>
             *{
-                font-family: 'nanumSquareRound' !important;
+                font-family: 'NanumSquareRound' !important;
             }
             
             #sideNav{
@@ -57,7 +56,7 @@
                             elem.querySelector('a').click();
                         }
                     }
-                    if(e.detail[0] > 0){
+                    if(e.detail && e.detail[0] > 0){
                         var target = e.detail[1].closest('.uk-parent');
                         if(target && !(target.classList.contains('uk-open'))){
                             target.classList.add('auto-open');
@@ -97,11 +96,11 @@
                             <a href="#">헤더 설정</a>
                             <ul class="uk-nav-sub">
                                 <li><a href="#header-1">개요</a></li>
-                                <li><a href="#header-2">헤더 타입 & 디자인</a></li>
-                                <li><a href="#header-3">스티키</a></li>
-                                <li><a href="#header-4">기능</a></li>
-                                <li><a href="#header-5">페이지</a></li>
-                                <li><a href="#header-6">모바일 사이드바</a></li>
+                                <li><a href="#header-2">기본 레이아웃</a></li>
+                                <li><a href="#header-3">기능</a></li>
+                                <li><a href="#header-4">페이지</a></li>
+                                <li><a href="#header-5">스티키</a></li>
+                                <li><a href="#header-6">모바일 사이드메뉴</a></li>
                             </ul>
                         </li>
                         <li class="uk-parent">
@@ -121,7 +120,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="uk-width-expand">
+                <div class="uk-width-expand" style="padding-bottom: 500px;">
                     <div>
                         <section id="start-1">
                             <h1 class="uk-heading-divider">디자인관리 매뉴얼</h1>
@@ -151,11 +150,11 @@
                             <h3>헤더 설정</h3>
                             <p>헤더 디자인 설정 입니다. 다음과 같은 기능을 제공합니다.</p>
                             <ul class="uk-list uk-list-hyphen">
-                                <li>헤더 타입 및 기본 디자인 설정</li>
-                                <li>스티키(고정 헤더) 설정</li>
+                                <li>기본 설정</li>
                                 <li>기능 설정</li>
                                 <li>페이지 설정</li>
-                                <li>모바일 사이드바 설정</li>
+                                <li>스티키 설정</li>
+                                <li>모바일 사이드메뉴 설정</li>
                             </ul>
                         </section>
                         <section id="intro-4">
@@ -178,72 +177,1131 @@
                     <div>
                         <section id="basic-1">
                             <h2>홈페이지 기본 설정</h2>
-                            <p>준비중입니다.</p>
+                            <p>홈페이지 전체적으로 적용되는 디자인 설정 기능입니다. 총 3개의 메뉴로 구성되어 있으며, 각 메뉴는 아래 그림과 함께 설명을 참고해 주세요.</p>
+                            <p>++++++++++++++++++++++++준비중입니다++++++++++++++++++++++++</p>
                         </section>
                         <section id="basic-2">
                             <h3>폰트</h3>
-                            <p>준비중입니다.</p>
+                            <p>적용하고 싶은 폰트를 선택합니다. 한글, 영문, 숫자, 특수문자에 대해 자유로운 설정이 가능합니다. 일부 폰트는 한글과 특수문자에서 사용이 불가능 하며, 영문 중 항상 대문자로 표시되는 폰트도 존재합니다. 폰트는 디자인 시안에 따라 지속적으로 업데이트될 예정이며, 현재 사용 가능한 폰트와 각 항목별 지원 여부는 다음과 같습니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-NanumBarunGothic">나눔 바른고딕</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-NanumBarunGothic">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-SpoqaHanSans">스포카 한 산스</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-SpoqaHanSans">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-IropkeBatang">이롭게 바탕</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-IropkeBatang">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-JejuMyeongjo">제주 명조</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-JejuMyeongjo">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-JejuGothic">제주 고딕</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-JejuGothic">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-HangeulNuri">한글 누리</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-HangeulNuri">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-SCoreDream">S코어드림</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-SCoreDream">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Alegreya">Alegreya</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Alegreya">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-BarlowSemiCondensed">BarlowSemiCondensed</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-BarlowSemiCondensed">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-BebasNeue">BebasNeue</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문(only 대문자)</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-BebasNeue">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Cinzel">Cinzel</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문(only 대문자)</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Cinzel">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-CormorantGaramond">CormorantGaramond</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-CormorantGaramond">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-EncodeSans">EncodeSans</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-EncodeSans">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Hind">Hind</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Hind">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-LexendPeta">LexendPeta</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-LexendPeta">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-NotoSans">NotoSans</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-NotoSans">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-NotoSerif">NotoSerif</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-NotoSerif">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Oswald">Oswald</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Oswald">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-PlayfairDisplay">PlayfairDisplay</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-PlayfairDisplay">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Pretendard">Pretendard</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Pretendard">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Quicksand">Quicksand</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Quicksand">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Raleway">Raleway</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Raleway">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-Roboto">Roboto</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-Roboto">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-SpaceMono">SpaceMono</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-SpaceMono">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-TexGyreCursor">TexGyreCursor</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-TexGyreCursor">ABC abc 123)</span>
+                                    </p>
+                                </li>
+                            </ul>
                         </section>
                         <section id="basic-3">
                             <h3>기본아이콘</h3>
-                            <p>준비중입니다.</p>
+                            <p>홈페이지 주요 기능에 대한 아이콘을 설정합니다. 설정 가능한 기능은 다음과 같습니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>장바구니</li>
+                                <li>로그인</li>
+                                <li>로그아웃</li>
+                                <li>마이 페이지</li>
+                                <li>모바일 메뉴 바</li>
+                                <li>포토구매평</li>
+                                <li>구매평 별점</li>
+                                <li>QNA 비밀글</li>
+                            </ul>
+                            <p>각 기능에 대해 개별 아이콘 설정이 가능하며 아이콘은 지속적으로 업데이트될 예정입니다. 현재 사용가능한 아이콘 종류는 다음과 같습니다.</p>
+                            <div class="uk-child-width-1-5 uk-text-center uk-width-1-1 uk-width-1-2@m uk-margin-medium-top" uk-grid>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/cart.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/cart2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/login.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/logout.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/user.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/camera.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/lock.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/heart.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/star.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/gift.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/gift2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/diamond.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/menuBar.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/minus.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/plus.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/angleDown.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/angleDown2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/angleUp.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/angleUp2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/arrowLeft.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/arrowLeft2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/arrowRight.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/arrowRight2.svg" width="30px" /></div>
+                                <div><img src="https://cdn.jsdelivr.net/gh/mooncorp-icon/icon@latest/svg/quoteRight.svg" width="30px" /></div>
+                            </div>
                         </section>
                         <section id="basic-4">
                             <h3>색상</h3>
-                            <p>준비중입니다.</p>
+                            <p>홈페이지에서 기본적으로 사용할 색상을 선택합니다. 설정 가능한 항목은 다음과 같습니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>가격 글자 색상</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>상품 리스트, 상품 상세, 장바구니, 주문정보 입력 등의 화면에서 일괄 적용 됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 팬시유 색상</span><span style="color:#6930c3"> ●(#6930c3) </span><span>적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/001.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 리스트]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/002.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 상세]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/003.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[장바구니]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/004.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[주문정보 입력]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>버튼 글자 색상</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>로그인 / 구매하기 / 결제하기 등 주요 버튼, 상품 상세 페이지 내 SALE 라벨 / 구매평·문의 개수, 체크박스, 페이지 버튼 등의 버튼 형식의 글자 색상에 일괄 적용 됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 팬시유 색상</span><span> ○(#ffffff) </span><span>적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/005.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[로그인]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/006.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[SALE라벨, 구매하기]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/007.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[글 개수, 페이지]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/008.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[체크박스]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>버튼 배경 색상</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>로그인 / 구매하기 / 결제하기 등 주요 버튼, 상품 상세 페이지 내 SALE 라벨 / 구매평·문의 개수, 체크박스, 페이지 버튼 등의 버튼 형식의 배경 색상에 일괄 적용 됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 팬시유 색상</span><span style="color:#6930c3"> ●(#6930c3) </span><span>적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/005.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[로그인]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/006.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[SALE라벨, 구매하기]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/007.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[글 개수, 페이지]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/008.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[체크박스]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>구매평 별점 색상</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>상품 상세 상단 구매평, 일반 구매평, 구매평 작성 모달 등 구매평 별점 색상에 일괄 적용 됩니다. 별점에 따라 채워지지 않은 영역(5점이 아닌 경우)은 불투명하게 표시됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 팬시유 색상</span><span style="color:#6930c3"> ●(#6930c3) </span><span>적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/009.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 상세 상단 구매평]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/010.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 상세 일반 구매평]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/011.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[구매평 작성 모달]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
                     </div>
                     <hr class="uk-margin-large-top" />
                     <div>
                         <section id="header-1">
                             <h2>헤더 설정</h2>
-                            <p>준비중입니다.</p>
+                            <p>홈페이지의 헤더 설정을 할 수 있습니다. 정의되어 있는 헤더 타입을 선택하고, 헤더 내부 동작과 색상, 순서등의 기본 레이아웃 설정이 가능합니다. 데스크탑의 경우 헤더 타입에 따라 홈페이지 전체 페이지 레이아웃이 변경될 수 있으며, 모바일의 경우 기본 상단 헤더 스타일이 유지 + 모바일 사이드메뉴 별도 설정이 가능합니다. 총 5개의 메뉴로 구성되어 있으며, 각 메뉴는 아래 그림과 함께 설명을 참고해 주세요.</p>
+                            <p>++++++++++++++++++++++++준비중입니다++++++++++++++++++++++++</p>
                         </section>
                         <section id="header-2">
-                            <h3>헤더 타입 & 디자인</h3>
-                            <p>준비중입니다.</p>
+                            <h3>기본 레이아웃</h3>
+                            <p>헤더 기본 디자인 설정 메뉴 입니다. 타입 선택, 헤더 높이, 기본 색상 설정, 내용 위치 설정, 기타 설정으로 구성됩니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>타입 선택</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>헤더 타입을 선택 할 수 있습니다. 데스크탑 레이아웃에 영향을 주며, 현재 사용 가능한 타입은 A(세로형), B(가로형) 입니다. A타입은 상단 헤더 + 아래 컨텐츠 구조의 세로 형식 레이아웃 이고, B타입은 좌/우 헤더 + 옆 컨텐츠 구조의 가로 형식 레이아웃 입니다. 모바일에서는 상단 헤더 레이아웃이 유지됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) A타입(내음) 적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/020.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[메인 페이지]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/021.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 상세]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) B타입(오소묘) 적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/022.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[메인 페이지]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/023.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[상품 상세]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>헤더 높이</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>헤더 높이를 px단위로 입력 합니다. 로고 높이와 상하여백을 각각 입력하고, 두 크기의 합이 전체 헤더 높이가 됩니다. 로고의 가로 사이즈는 입력한 높이에 따라 비율이 자동계산 되어 표시됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 내음 데스크탑(로고 : 45px, 상하여백 : 35px)</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/024.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[전체 헤더 높이 : 80px]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>기본 색상 설정</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>헤더의 배경과 폰트 색상을 설정합니다. 헤더 상태가 스티키와 오버랩일 경우를 제외한 기본 헤더 상태에서만 동작합니다. 로고이미지를 제외한 페이지/기능/메뉴바 등 헤더에 포함된 모든 텍스트 및 아이콘에 적용됩니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 센르 폰트</span><span style="color:#000000"> ●(#000000) </span><span>, 배경</span><span style="color:#fffbf0"> ●</span><span>(#fffbf0) </span><span>적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/025.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[텍스트]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/026.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[기능 아이콘, 메뉴바]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>내용 위치 설정</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>헤더 내부 내용의 위치를 설정합니다. 헤더 타입, 데스크탑 / 모바일 여부에 따라 설정 가능한 항목이 상이합니다. 각 항목은 활성화 상태일 때만 적용됩니다.</span>
+                                    </p>
+                                    <div class="uk-margin-top uk-margin-remove-bottom">
+                                        <span>데스크탑</span>
+                                        <ul class="uk-list uk-list-circle uk-margin-remove-top">
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>헤더 타입 A - 로고, 페이지, 기능</span>
+                                                </p>
+                                                <p class="uk-margin-remove">
+                                                    <span>로고, 페이지, 기능의 위치를 설정합니다. 왼쪽/가운데/오른쪽/숨김 중 한가지를 선택합니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 센르 로고 위치 설정</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/027.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[왼쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/028.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[가운데]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/029.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[오른쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="uk-margin-remove">
+                                                    <span>로고, 페이지, 기능의 위치를 동일하게 할 경우 다음 우선순위별 순서대로 노출됩니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>1. 모두 왼쪽일 경우 : 로고 - 페이지 - 기능</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/032.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 왼쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/033.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 왼쪽 확대]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>2. 모두 가운데일 경우 : 페이지 - 로고 - 기능</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/034.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 가운데]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/035.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 가운데 확대]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>3. 모두 오른쪽일 경우 : 페이지 - 기능 - 로고</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/036.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 오른쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/037.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[내음 - 모두 오른쪽 확대]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>헤더 타입 B - 전체 설정</span>
+                                                </p>
+                                                <p class="uk-margin-remove">
+                                                    <span>헤더 전체의 위치를 설정합니다. 왼쪽/오른쪽 중 한가지를 선택합니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 팟팩토리 전체 위치 설정</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/030.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더 타입 B - 왼쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/031.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더 타입 B - 오른쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-margin-medium-top uk-margin-remove-bottom">
+                                        <span>모바일</span>
+                                        <p class="uk-margin-remove-top uk-margin-small-bottom">
+                                            <span>헤더 타입과 관계없이 동일하게 동작합니다. 데스크탑과 다르게 페이지 대신 메뉴바가 존재합니다.</span>
+                                        </p>
+                                        <ul class="uk-list uk-list-circle uk-margin-remove-top uk-margin-medium-bottom">
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>로고, 기능</span>
+                                                </p>
+                                                <p class="uk-margin-remove">
+                                                    <span>로고, 기능의 위치를 설정합니다. 왼쪽/가운데/오른쪽/숨김 중 한가지를 선택합니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 팬시유 로고 위치 설정</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/038.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[왼쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/039.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[가운데]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/040.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[오른쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>메뉴바</span>
+                                                </p>
+                                                <p class="uk-margin-remove">
+                                                    <span>모바일 화면에만 설정할 수 있으며, 왼쪽/오른쪽 중 한가지를 선택합니다. 클릭 시 사이드 메뉴가 활성화 됩니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 팬시유 메뉴바 위치 설정</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/041.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[왼쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/042.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[오른쪽]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="uk-margin-remove">
+                                            <span>로고, 기능, 메뉴바의 위치를 동일하게 할 경우 다음 우선순위별 순서대로 노출됩니다.</span>
+                                        </p>
+                                        <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                            <span>1. 모두 왼쪽일 경우 : 메뉴바 - 로고 - 기능</span>
+                                        </p>
+                                        <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                    <img src="resource/image/043.jpg" style="height: 220px;" />
+                                                    <p class="uk-margin-remove-bottom" style="margin-top:7px;">[센르 - 모두 왼쪽]</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                            <span>2. 모두 가운데일 경우 : 로고 - 기능 (메뉴바는 가운데 설정 불가)</span>
+                                        </p>
+                                        <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                    <img src="resource/image/044.jpg" style="height: 220px;" />
+                                                    <p class="uk-margin-remove-bottom" style="margin-top:7px;">[센르 - 모두 가운데]</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                            <span>3. 모두 오른쪽일 경우 : 기능 - 로고 - 메뉴바</span>
+                                        </p>
+                                        <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                    <img src="resource/image/045.jpg" style="height: 220px;" />
+                                                    <p class="uk-margin-remove-bottom" style="margin-top:7px;">[센르 - 모두 오른쪽]</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>기타 설정</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>메인페이지 오버랩 설정과 데스크탑 와이드 레이아웃 설정이 가능합니다.</span>
+                                    </p>
+                                    <div class="uk-margin-small-top uk-margin-remove-bottom">
+                                        <ul class="uk-list uk-list-circle uk-margin-remove-top">
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>오버랩 설정 : 헤더와 컨텐츠 레이어를 겹치는 기능입니다. 메인페이지에서만 동작합니다. 오버랩 사용 시 별도의 폰트와 배경 색상이 적용됩니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 내음 오버랩 여부에 따른 차이</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/046.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[오버랩 X - 기본 색상 설정을 따름]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/047.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[오버랩 O - 오버랩 색상 설정을 따름]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/048.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[메인페이지가 아닐 경우 오버랩 X 와 동일]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="uk-margin-remove">
+                                                    <span>데스크탑 와이드 레이아웃 설정 : 데스크탑 전용 설정으로, 헤더 및 컨텐츠 가로 확장여부를 결정합니다. 기본 가로 크기는 최대 1200px이며, 활성화 시 최대 크기 제한 없이 모니터 사이즈에 맞춰 확장됩니다. 헤더 타입 'A'의 경우 헤더에만 적용되고, 'B'의 경우 전체 컨텐츠에 적용됩니다.</span>
+                                                </p>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 헤더 타입 'A'의 경우</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/049.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[적용 X]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/050.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[적용 O]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                                    <span>ex) 헤더 타입 'B'의 경우</span>
+                                                </p>
+                                                <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/051.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[적용 X]</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-width-auto">
+                                                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                            <img src="resource/image/052.jpg" style="height: 220px;" />
+                                                            <p class="uk-margin-remove-bottom" style="margin-top:7px;">[적용 O]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
                         <section id="header-3">
-                            <h3>스티키</h3>
-                            <p>준비중입니다.</p>
+                            <h3>기능</h3>
+                            <p>헤더와 모바일 사이드 메뉴에 나타나는 홈페이지 기본 기능에 대한 설정입니다. 기능은 카트, 로그인, 로그아웃, 마이페이지 4개로 구성됩니다. 각 기능에 대해 이름과 표시 방식을 설정합니다. 설정 가능한 표시 방식은 다음과 같습니다. (단, 모바일 사이드 메뉴의 경우 항상 텍스트로 표시됩니다.)</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>숨김 : 헤더에 나타나지 않습니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 내음 - 숨김 적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/053.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/054.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 사이드 메뉴]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>텍스트 : 설정한 이름으로 표시합니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 내음 - 텍스트 적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/055.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/056.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 사이드 메뉴]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>아이콘 : 홈페이지 기본 설정에서 설정한 아이콘으로 표시합니다.</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                        <span>ex) 내음 - 아이콘 적용</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/057.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/058.jpg" style="height: 220px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 사이드 메뉴]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
                         <section id="header-4">
-                            <h3>기능</h3>
-                            <p>준비중입니다.</p>
+                            <h3>페이지</h3>
+                            <p>기본 기능 외 사용하고 싶은 페이지를 자유롭게 추가 할 수 있습니다. 등록한 순서에 따라 헤더 및 모바일 사이드 메뉴에 노출됩니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>이름</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-bottom">
+                                        <span>페이지 이름을 입력합니다.</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>타입</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-bottom">
+                                        <span>상품리스트, 커스텀, 외부링크 3가지 중 한가지를 선택합니다.</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>경로</span>
+                                    </p>
+                                    <p class="uk-margin-small-top uk-margin-remove-bottom">
+                                        <span>페이지 타입이 커스텀 / 외부링크인 경우 입력 가능합니다. 커스텀인 경우 사용하고 싶은 경로를 입력하고(ex. about), 외부링크인 경우 해당 페이지의 URL(ex. https://naver.com)을 입력합니다.</span>
+                                    </p>
+                                </li>
+                            </ul>
                         </section>
                         <section id="header-5">
-                            <h3>페이지</h3>
-                            <p>준비중입니다.</p>
+                            <h3>스티키</h3>
+                            <p>페이지를 스크롤 할 때 상단에 계속 남아있는 기능을 스티키라고 합니다. 데스크탑/모바일 개별 설정이 가능하며, 상품상세페이지의 경우 별도 설정이 가능합니다. 사용 가능한 동작 방식은 아래와 같습니다.</p>
+                            <div style="margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:15px">
+                                        <p class="uk-margin-remove" style="margin-top:7px;">[미사용]</p>
+                                        <p class="uk-margin-remove-top" style="margin-top:7px; font-size: 0.9em;">스티키 기능을 사용하지 않습니다.</p>
+                                        <video src="resource/image/059.mp4" width="200" loop muted playsinline uk-video="autoplay: inview"></video>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:15px">
+                                        <p class="uk-margin-remove" style="margin-top:7px;">[항상]</p>
+                                        <p class="uk-margin-remove-top" style="margin-top:7px; font-size: 0.9em;">스티키 헤더가 항상 나타납니다.</p>
+                                        <video src="resource/image/060.mp4" width="200" loop muted playsinline uk-video="autoplay: inview"></video>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:15px">
+                                        <p class="uk-margin-remove" style="margin-top:7px;">[스크롤 업]</p>
+                                        <p class="uk-margin-remove-top" style="margin-top:7px; font-size: 0.9em;">스크롤을 올릴 때만 나타납니다.</p>
+                                        <video src="resource/image/061.mp4" width="200" loop muted playsinline uk-video="autoplay: inview"></video>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                         <section id="header-6">
-                            <h3>모바일 사이드바</h3>
-                            <p>준비중입니다.</p>
+                            <h3>모바일 사이드메뉴</h3>
+                            <p>모바일 사이드메뉴 디자인 설정 입니다. 모바일 사이드메뉴는 데스크탑에서는 나타나지 않으며, 모바일 환경에서 메뉴바를 터치했을 때 활성화 됩니다. 설정 가능한 항목은 다음과 같습니다.</p>
+                            <ul class="uk-list uk-list-hyphen">
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>타입 선택</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>모바일 사이드 메뉴 타입을 선택 할 수 있습니다. 현재 사용 가능한 타입은 A, B입니다.</span>
+                                    </p>
+                                    <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/062.jpg" style="height: 400px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[A타입 - 내음]</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                                <img src="resource/image/063.jpg" style="height: 400px;" />
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[B타입 - 팟팩토리]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
+                                        <span>색상 설정</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top uk-margin-remove-bottom">
+                                        <span>모바일 사이드 메뉴에서 사용할 색상을 선택합니다. 배경과 폰트 색상 설정이 가능합니다.</span>
+                                    </p>
+                                </li>
+                            </ul>
                         </section>
                     </div>
                     <hr class="uk-margin-large-top" />
                     <div>
                         <section id="productList-1">
                             <h2>상품 리스트 페이지 설정</h2>
-                            <p>준비중입니다.</p>
+                            <p>상품 리스트 레이아웃 설정 메뉴 입니다. 디자인 타입 선택과 데스크탑/모바일 가로 화면 최대 노출 아이템 수 설정이 가능합니다. 각 메뉴는 아래 그림과 함께 설명을 참고해 주세요.</p>
+                            <p>++++++++++++++++++++++++준비중입니다++++++++++++++++++++++++</p>
                         </section>
                         <section id="productList-2">
                             <h3>타입</h3>
-                            <p>준비중입니다.</p>
+                            <p class="uk-margin-remove-bottom">디자인 타입을 선택합니다. 현재 A타입만 가능합니다.</p>
+                            <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                <span>ex) A타입 적용</span>
+                            </p>
+                            <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/012.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[데스크탑]</p>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/013.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일]</p>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                         <section id="productList-3">
                             <h3>노출 아이템 수</h3>
-                            <p>준비중입니다.</p>
+                            <p class="uk-margin-remove-bottom">데스크탑 / 모바일 각각 노출 아이템 수 설정이 가능합니다.</p>
+                            <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                <span>ex) 2개, 1개 적용 시</span>
+                            </p>
+                            <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/014.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[2개 - 데스크탑]</p>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/015.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[2개 - 모바일]</p>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/016.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[1개 - 데스크탑]</p>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/017.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[1개 - 모바일]</p>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <hr class="uk-margin-large-top" />
                     <div>
                         <section id="productDetail-1">
                             <h2>상품 상세 페이지 설정</h2>
-                            <p>준비중입니다.</p>
+                            <p>상품 상세 페이지 레이아웃 설정 메뉴 입니다. 디자인 타입 선택이 가능합니다. 각 메뉴는 아래 그림과 함께 설명을 참고해 주세요.</p>
+                            <p>++++++++++++++++++++++++준비중입니다++++++++++++++++++++++++</p>
                         </section>
                         <section id="productDetail-2">
                             <h3>타입</h3>
-                            <p>준비중입니다.</p>
+                            <p class="uk-margin-remove-bottom">디자인 타입을 선택합니다. 현재 A타입만 가능합니다.</p>
+                            <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
+                                <span>ex) A타입 적용</span>
+                            </p>
+                            <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small" uk-grid>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/018.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[데스크탑]</p>
+                                    </div>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
+                                        <img src="resource/image/019.jpg" style="height: 220px;" />
+                                        <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일]</p>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
 
