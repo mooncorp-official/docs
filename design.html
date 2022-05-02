@@ -198,6 +198,18 @@
                                 </li>
                                 <li>
                                     <p class="uk-margin-remove-bottom">
+                                        <span class="uk-margin-small-right font-NanumSquareRound">나눔 스퀘어 라운드</span>
+                                        <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
+                                        <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
+                                        <span class="uk-label uk-label-warning" style="font-size:0.7em; text-transform: none;">숫자</span>
+                                        <span class="uk-label uk-label-danger" style="font-size:0.7em; text-transform: none;">특수문자</span>
+                                    </p>
+                                    <p class="uk-margin-remove-top" style="font-size: 0.8em;">
+                                        <span>(미리보기 : </span><span class="font-NanumSquareRound">가나다 ABC abc 123 ■▲●★♥)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="uk-margin-remove-bottom">
                                         <span class="uk-margin-small-right font-SpoqaHanSans">스포카 한 산스</span>
                                         <span class="uk-label" style="font-size:0.7em; text-transform: none;">한글</span>
                                         <span class="uk-label uk-label-success" style="font-size:0.7em; text-transform: none;">영문</span>
@@ -723,10 +735,10 @@
                                         <span>기본 색상 설정</span>
                                     </p>
                                     <p class="uk-margin-remove-top uk-margin-remove-bottom">
-                                        <span>헤더의 배경과 폰트 색상을 설정합니다. 헤더 상태가 스티키와 오버랩일 경우를 제외한 기본 헤더 상태에서만 동작합니다. 로고이미지를 제외한 페이지/기능/메뉴바 등 헤더에 포함된 모든 텍스트 및 아이콘에 적용됩니다.</span>
+                                        <span>헤더의 배경과 텍스트 색상을 설정합니다. 헤더 상태가 스티키와 오버랩일 경우를 제외한 기본 헤더 상태에서만 동작합니다. 로고이미지를 제외한 페이지/기능/메뉴바 등 헤더에 포함된 모든 텍스트 및 아이콘에 적용됩니다.</span>
                                     </p>
                                     <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
-                                        <span>ex) 센르 폰트</span><span style="color:#000000"> ●(#000000) </span><span>, 배경</span><span style="color:#fffbf0"> ●</span><span>(#fffbf0) </span><span>적용</span>
+                                        <span>ex) 센르 텍스트</span><span style="color:#000000"> ●(#000000) </span><span>, 배경</span><span style="color:#fffbf0"> ●</span><span>(#fffbf0) </span><span>적용</span>
                                     </p>
                                     <div style="font-size: 0.8em; margin-top: 5px;" class="uk-text-center uk-grid-small uk-margin-medium-bottom" uk-grid>
                                         <div class="uk-width-auto">
@@ -977,7 +989,7 @@
                                         <ul class="uk-list uk-list-circle uk-margin-remove-top">
                                             <li>
                                                 <p class="uk-margin-remove">
-                                                    <span>오버랩 설정 : 헤더와 컨텐츠 레이어를 겹치는 기능입니다. 메인페이지에서만 동작합니다. 오버랩 사용 시 별도의 폰트와 배경 색상이 적용됩니다.</span>
+                                                    <span>오버랩 설정 : 헤더와 컨텐츠 레이어를 겹치는 기능입니다. 메인페이지에서만 동작합니다. 데스크탑/모바일 별도 설정이 가능하며 오버랩 사용 시 별도의 텍스트 색상 및 투명 배경이 적용됩니다.</span>
                                                 </p>
                                                 <p class="uk-margin-small-top uk-margin-remove-bottom" style="font-size: 0.9em;">
                                                     <span>ex) 내음 오버랩 여부에 따른 차이</span>
@@ -1049,7 +1061,7 @@
                         </section>
                         <section id="header-3">
                             <h3>기능</h3>
-                            <p>헤더와 모바일 사이드 메뉴에 나타나는 홈페이지 기본 기능에 대한 설정입니다. 기능은 카트, 로그인, 로그아웃, 마이페이지 4개로 구성됩니다. 각 기능에 대해 이름과 표시 방식을 설정합니다. 설정 가능한 표시 방식은 다음과 같습니다. (단, 모바일 사이드 메뉴의 경우 항상 텍스트로 표시됩니다.)</p>
+                            <p>헤더와 모바일 사이드 메뉴에 나타나는 홈페이지 기본 기능에 대한 설정입니다. 기능은 카트, 로그인, 로그아웃, 마이페이지 4개로 구성됩니다. 각 기능에 대해 이름과 표시 방식을 설정합니다. 데스크탑/모바일 별도 설정이 가능하며, 표시 방식은 다음과 같습니다. (단, 모바일 사이드 메뉴의 경우 항상 텍스트로 표시됩니다.)</p>
                             <ul class="uk-list uk-list-hyphen">
                                 <li>
                                     <p class="uk-margin-remove-bottom">
@@ -1062,7 +1074,7 @@
                                         <div class="uk-width-auto">
                                             <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
                                                 <img src="resource/image/053.jpg" style="height: 220px;" />
-                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 헤더]</p>
                                             </div>
                                         </div>
                                         <div class="uk-width-auto">
@@ -1084,7 +1096,7 @@
                                         <div class="uk-width-auto">
                                             <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
                                                 <img src="resource/image/055.jpg" style="height: 220px;" />
-                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 헤더]</p>
                                             </div>
                                         </div>
                                         <div class="uk-width-auto">
@@ -1106,7 +1118,7 @@
                                         <div class="uk-width-auto">
                                             <div class="uk-card uk-card-default uk-card-body uk-card-small uk-display-inline-block uk-text-center" style="padding:7px">
                                                 <img src="resource/image/057.jpg" style="height: 220px;" />
-                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[헤더]</p>
+                                                <p class="uk-margin-remove-bottom" style="margin-top:7px;">[모바일 헤더]</p>
                                             </div>
                                         </div>
                                         <div class="uk-width-auto">
